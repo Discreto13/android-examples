@@ -26,11 +26,23 @@
             android:layout_height="wrap_content"
             android:text="STOP" />
 
-        <Button
+            <Button
+            android:id="@+id/b_bind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bind" />
+
+            <Button
             android:id="@+id/b_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send message to service" />
+            android:text="Request" />
+
+            <Button
+            android:id="@+id/b_unbind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unbind" />
 
     </LinearLayout>
 

@@ -11,22 +11,23 @@ import java.util.Random;
 public class MyService extends Service {
 
     // binder given to clients
-//    private final IBinder mBinder = new MyBinder();
-//    public class MyBinder extends Binder {
-//        MyService getService() {
-//            return MyService.this;
-//        }
-//        int getRandNumber() {
-//            return mGenerator.nextInt();
-//        }
-//    }
+    private final IBinder mBinder = new MyBinder();
+
+    public class MyBinder extends Binder {
+        MyService getService() {
+            return MyService.this;
+        }
+    }
 
     // random numbers generator
-//    private final Random mGenerator = new Random();
+    private final Random mGenerator = new Random();
+    public int getRandNumber() {
+        return mGenerator.nextInt();
+    }
 
     @Override
     public IBinder onBind(Intent intent) {
-        return null; // mBinder;
+        return mBinder;
     }
 
     @Override
